@@ -1,19 +1,24 @@
 #include "tree.h"
-#include "treeSolution.h""
+#include "tddFuncs.h"
 #include <iostream>
 
-void assertEquals(std::string expected, 
-		  std::string actual, 
-		  std::string message) {
-  if (expected==actual) {
-    cout << "PASSED: " << message << endl;
-  } else {
-    cout << "   FAILED: " << message << endl 
-	  << "     Expected: " << expected << " Actual: " << actual << endl; 
-  }
-}
+const string tree3 = "*\n**\n***\n**\n**\n";
+
+const string tree5 = "*\n**\n***\n**\n***\n****\n*****\n**\n**\n";
+
+const string tree7 = "*\n**\n***\n**\n***\n****\n*****\n**\n***\n****\n*****\n******\n*******\n**\n**\n";
+
+const string tree9 = "*\n**\n***\n**\n***\n****\n*****\n**\n***\n****\n*****\n******\n*******\n**\n***\n****\n*****\n******\n*******\n********\n*********\n**\n**\n";
+
+const string tree11 = "*\n**\n***\n**\n***\n****\n*****\n**\n***\n****\n*****\n******\n*******\n**\n***\n****\n*****\n******\n*******\n********\n*********\n**\n***\n****\n*****\n******\n*******\n********\n*********\n**********\n***********\n**\n**\n";
+
 
 int main(int argc, char* argv[]) { 
+  if(argc < 2) {
+    std::cerr << "Usage: " << argv[0] << " [num of test to run]" << std::endl;
+    return 1;
+  }
+
   int testNum = atoi(argv[1]);
 
   if(testNum == 1){
@@ -51,4 +56,4 @@ int main(int argc, char* argv[]) {
   if(testNum == 9){
     assertEquals(tree11, printTree(11), "test case 9: tree width is 11");
   }
-  }
+}
