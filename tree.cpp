@@ -7,17 +7,27 @@ string printTree(int width) {
         cerr << "incorrect input" << endl;
         return "";
     }
-    string ans = "*\n";
+    string ans = "";
     int sessions = (width - 2) / 2 + 1;
-    for (int i = 0; i < sessions; i++) {
-      int sessionWidth = 3 + 2 * i;
-      for (int j = 2; j <= sessionWidth; j++){
-        string tmp(j,'*');
-        ans += tmp + "\n";
+    for (int j = 0; j < sessions; j++){
+      for(int i = 1, k = 0; i <= j+2; ++i, k = 0)
+      {
+          for(int space = 1; space <= width/2+1-i; ++space)
+          {
+              ans += " ";
+          }
+  
+          while(k != 2*i-1)
+          {
+              ans += "*";
+              ++k;
+          }
+          ans += "\n";
       }
     }
-    for (int i = 0; i < 2; i++){
-        ans += "**\n";
-    }
+    int mid = width / 2;
+    string space(mid, ' ');
+    ans += space + "*\n";
+    ans += space + "*\n";
     return ans;
 }

@@ -2,15 +2,15 @@
 #include "tddFuncs.h"
 #include <iostream>
 
-const string tree3 = "*\n**\n***\n**\n**\n";
+const string tree3 = " *\n***\n *\n *\n";
 
-const string tree5 = "*\n**\n***\n**\n***\n****\n*****\n**\n**\n";
+const string tree5 = "  *\n ***\n  *\n ***\n*****\n  *\n  *\n";
 
-const string tree7 = "*\n**\n***\n**\n***\n****\n*****\n**\n***\n****\n*****\n******\n*******\n**\n**\n";
+const string tree7 = "   *\n  ***\n   *\n  ***\n *****\n   *\n  ***\n *****\n*******\n   *\n   *\n";
 
-const string tree9 = "*\n**\n***\n**\n***\n****\n*****\n**\n***\n****\n*****\n******\n*******\n**\n***\n****\n*****\n******\n*******\n********\n*********\n**\n**\n";
+const string tree9 = "    *\n   ***\n    *\n   ***\n  *****\n    *\n   ***\n  *****\n *******\n    *\n   ***\n  *****\n *******\n*********\n    *\n    *\n";
 
-const string tree11 = "*\n**\n***\n**\n***\n****\n*****\n**\n***\n****\n*****\n******\n*******\n**\n***\n****\n*****\n******\n*******\n********\n*********\n**\n***\n****\n*****\n******\n*******\n********\n*********\n**********\n***********\n**\n**\n";
+const string tree11 = "     *\n    ***\n     *\n    ***\n   *****\n     *\n    ***\n   *****\n  *******\n     *\n    ***\n   *****\n  *******\n *********\n     *\n    ***\n   *****\n  *******\n *********\n***********\n     *\n     *\n";
 
 
 int main(int argc, char* argv[]) { 
